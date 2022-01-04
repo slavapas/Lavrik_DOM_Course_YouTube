@@ -6,9 +6,10 @@
 /* html {
   scroll-behavior: smooth;
 } */
+html,
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   background-color: #fff;
   color: #333;
 }
@@ -38,6 +39,45 @@ h2 {
 hr {
   margin: 40px 0;
 }
+
+#gallery {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.photos img {
+  width: 100%;
+  display: none;
+}
+
+.photos img:first-child {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  gap: 50px;
+}
+
+.buttons input {
+  width: 100px;
+  background: #ddd;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 p {
   margin-bottom: 30px;
   line-height: 1.4em;
