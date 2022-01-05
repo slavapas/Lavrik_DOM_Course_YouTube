@@ -24,25 +24,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // console.log(images);
 
   i = 0;
-  btnPrev.onclick = () => {
-    // console.log(images[i]);
-    images[i].style.display = "none";
 
-    if (i >= 0) {
-      console.log(images[i]);
-      images[i - 1].style.display = "block";
-      i--;
-    } else {
-      console.log(images[i]);
-      i = 0;
-      images[i - 1].style.display = "block";
+  btnPrev.onclick = () => {
+    console.log(i);
+    images[i].style.display = "none";
+    i--;
+
+    if (i < 0) {
+      i = images.length - 1;
     }
+    images[i].style.display = "block";
   };
 
   btnNext.onclick = () => {
-    // console.log(images[i]);
+    console.log(i);
     images[i].style.display = "none";
-    images[i + 1].style.display = "block";
     i++;
+
+    if (i >= images.length) {
+      i = 0;
+    }
+    images[i].style.display = "block";
   };
 });
