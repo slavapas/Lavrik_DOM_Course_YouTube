@@ -14,6 +14,7 @@
 //   elem.style.fontSize = "30px";
 // });
 
+// Simplest Slider
 document.addEventListener("DOMContentLoaded", function () {
   let btnPrev = document.querySelector("#gallery .buttons .prev");
   // console.log(btnPrev);
@@ -26,24 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
   i = 0;
 
   btnPrev.onclick = () => {
-    console.log(i);
-    images[i].style.display = "none";
+    //console.log(i);
+    images[i].className = "";
     i--;
 
     if (i < 0) {
       i = images.length - 1;
     }
-    images[i].style.display = "block";
+    images[i].className = "showed";
   };
 
   btnNext.onclick = () => {
-    console.log(i);
-    images[i].style.display = "none";
+    //console.log(i);
+    images[i].className = "";
     i++;
 
     if (i >= images.length) {
       i = 0;
     }
-    images[i].style.display = "block";
+    images[i].className = "showed";
   };
 });
